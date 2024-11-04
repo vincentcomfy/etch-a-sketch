@@ -1,0 +1,80 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #F0F8FF; /* Light pastel blue */
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90vw;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #FFF1E6; /* Light pastel peach */
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.banner, .footer {
+    margin: 10px 0;
+}
+
+h1 {
+    color: #4B3F72; /* Dark pastel purple */
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+#reset-button, #wipe-button {
+    padding: 8px 16px;
+    font-size: 1rem;
+    margin-top: 8px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    color: #FFF;
+    background-color: #4B3F72; /* Dark pastel purple */
+    transition: background-color 0.3s ease;
+}
+
+#reset-button:hover, #wipe-button:hover {
+    background-color: #6C63FF; /* Lighter pastel purple on hover */
+}
+
+.grid {
+    display: grid;
+    gap: 2px;
+    width: 100%;
+    max-height: 70vh;
+    aspect-ratio: 1;
+    border: 2px solid #4B3F72; /* Matches button color */
+    margin: 20px 0;
+}
+
+.square {
+    background-color: #D3CCE3; /* Soft pastel grayish lavender */
+    border: 1px solid #B2A1C7; /* Complementary border color */
+    width: 100%;
+    height: 100%;
+}
+
+.square.hovered {
+    background-color: #A5D8DD; /* Pastel teal when hovered */
+}
+
+.footer p {
+    color: #6C63FF; /* Light pastel purple */
+    font-size: 0.9rem;
+}
