@@ -18,14 +18,38 @@ body {
     background-color: cadetblue;
 }
 
+.gridSizeSlider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100px;
+    height: 25px;
+    background-color: grey;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.gridSizeSlider:hover {
+    opacity: 1;
+}
+
 .main {
     flex: 4;
     display: flex;
+    flex-direction: column;
     min-width: 100%;
     justify-content: center;
     background-color: bisque;
     height: 100%;
 }
+
+.sketchpad {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 200px; 
+    max-height: 200px;
+  }
 
 .cell {
     border: 1px solid black;
