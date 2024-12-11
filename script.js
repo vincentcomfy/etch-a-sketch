@@ -19,6 +19,3 @@ function drawSketchpad(gridSize) {
     }
   }
 }
-
-// testing
-drawSketchpad(4);
