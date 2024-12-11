@@ -22,3 +22,8 @@ body {
     justify-content: center;
     background-color: bisque;
 }
+
+.cell {
+    border: 1px solid grey;
+    background-color: darkgray;
+}
