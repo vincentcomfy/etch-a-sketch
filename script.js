@@ -9,13 +9,24 @@ slider.oninput = function() {
 
 function drawSketchpad(gridSize) {
   const gridContainer = document.getElementById('grid');
-  gridContainer.innerHTML = ""; // Clear previous grid (optional)
+  gridContainer.innerHTML = "";
+
+  const sketchpadSize = 200;
+  const cellSize = sketchpadSize/gridSize;
+
+  gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+  gridContainer.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
+  gridContainer.style.display = `grid`;
 
   for (let row = 0; row < gridSize; row++) {
-    for (let col = 0; col < gridSize; col++) {
-      const cell = document.createElement('div');
+    for (let col = 0; col < gridSize; col ++) {
+      const cell = document.createElement(`div`);
       cell.classList.add('cell');
+      cell.style.width = `${cellSize}px`;
+      cell.style.height = `${cellSize}px`;
       gridContainer.appendChild(cell);
     }
   }
 }
+
+drawSketchpad(4);
