@@ -9,9 +9,13 @@ slider.oninput = function() {
 
 function drawSketchpad(gridSize) {
   const gridContainer = document.getElementById('grid');
+  gridContainer.addEventListener("click", (event) => {
+    colorGridBox(event.target);
+  })
+
   gridContainer.innerHTML = "";
 
-  const sketchpadSize = 200;
+  const sketchpadSize = 800;
   const cellSize = sketchpadSize/gridSize;
 
   gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
@@ -28,5 +32,16 @@ function drawSketchpad(gridSize) {
     }
   }
 }
+
+
+let colorPicker = document.getElementById('colorPicker');
+const gridContainer = document.getElementById('grid')
+
+
+function colorGridBox(gridBox) {
+  gridBox.style.backgroundColor = colorPicker.value;
+}
+
+
 
 drawSketchpad(4);
